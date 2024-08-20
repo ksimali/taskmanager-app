@@ -1,0 +1,32 @@
+$lightgrey : #D3D3D3;
+$whitesmoke : #F5F5F5;
+$color_navigation_link: #ffff;
+$color_navigation_link_hover: #dddd;
+
+.app-header{
+    background-color: lightgrey;
+    display: flex;
+    padding: 1rem;
+    justify-content: end;
+    align-items: center;
+
+    nav{
+        .nav-links{
+            list-style: none;
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        li{
+            a{
+                color: $color_navigation_link;
+                text-decoration: none;
+                font-weight: bold;
+            }
+
+            &:hover{
+                color: $color_navigation_link_hover;
+            }
+        }
+    }
+}
