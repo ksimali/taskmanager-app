@@ -7,10 +7,12 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { TaskListInputComponent } from './task-list-input/task-list-input.component';
+import { TaskListComponent } from './task-list/task-list.component';
 @NgModule({
   declarations: [
     AppComponent,
-    TaskListInputComponent
+    TaskListInputComponent,
+    TaskListComponent
   ],
   imports: [
     BrowserModule,
