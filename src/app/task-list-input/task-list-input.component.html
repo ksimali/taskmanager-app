@@ -7,7 +7,8 @@
             <p>{{task.description}}</p>
         </mat-card-content>
         <mat-card-actions>
-            <button mat-button class="primary" *ngIf="!task.isDone">Mark as Done</button>
+            <button mat-button class="primary" *ngIf="!task.isDone" (click)="markAsDone(task)">Mark as Done</button>
+            <button mat-button class="primary" *ngIf="task.isDone">Completed</button>
         </mat-card-actions>
     </mat-card>
 </div>
