@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TaskService } from '../services/task.service';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-task-detail',
@@ -7,4 +9,12 @@ import { Component } from '@angular/core';
 })
 export class TaskDetailComponent {
 
+  constructor(
+    private taskService: TaskService,
+    private router: Router,
+    private route: ActivatedRoute
+  ){
+    const taskId = route.snapshot.paramMap.get("id");
+    console.log(taskId);
+  }
 }
