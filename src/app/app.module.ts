@@ -8,11 +8,13 @@ import { MatCardModule } from '@angular/material/card';
 import { MatButtonModule } from '@angular/material/button';
 import { TaskListInputComponent } from './task-list-input/task-list-input.component';
 import { TaskListComponent } from './task-list/task-list.component';
+import { TaskDetailComponent } from './task-detail/task-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
     TaskListInputComponent,
-    TaskListComponent
+    TaskListComponent,
+    TaskDetailComponent
   ],
   imports: [
     BrowserModule,
