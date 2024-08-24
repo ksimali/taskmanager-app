@@ -6,12 +6,16 @@ import { Task } from "../models/task.model";
     providedIn: 'root'
 })
 export class TaskService {
-    tasks: Task[] =[
+    private tasks: Task[] =[
         {id: "1", title: "Task 1", description: "Description for task 1", isDone: false},
         {id: "2", title: "Task 2", description: "Description for task 2", isDone: true},
         {id: "3", title: "Task 3", description: "Description for task 3", isDone: false},
         {id: "4", title: "Task 4", description: "Description for task 4", isDone: true},
     ]
+
+    getTasks(){
+      return this.tasks;
+    }
 
     updateTask(updatedTask: Task){
         console.log(updatedTask);
