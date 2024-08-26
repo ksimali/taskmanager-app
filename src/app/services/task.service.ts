@@ -13,10 +13,17 @@ export class TaskService {
         {id: "4", title: "Task 4", description: "Description for task 4", isDone: true},
     ]
 
+    // Get all the tasks
     getTasks(){
       return this.tasks;
     }
 
+    // get a task by id
+    getTask(id: string): Task | undefined{
+      return this.tasks.find(task => task.id === id);
+    }
+
+    // Update a task
     updateTask(updatedTask: Task){
         console.log(updatedTask);
         const index = this.tasks.findIndex(task => task.id === updatedTask.id)
