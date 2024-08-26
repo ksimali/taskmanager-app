@@ -25,8 +25,12 @@ export class TaskEditComponent {
     // create form
     this.editForm = this.fb.group({
       description: ['', Validators.required]
-
     });
+    if(this.task){
+      this.editForm.patchValue({
+        description: this.task.description
+      })
+    }
   }
 
   onSubmit(){
