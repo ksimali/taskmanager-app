@@ -23,6 +23,14 @@ export class TaskDetailComponent {
     console.log(this.task);
   }
 
+  markAsDone(){
+    if(this.task){
+      this.task!.isDone = true; // change isDone value attribute
+      this.taskService.updateTask(this.task);// appel service TaskSerivce.updateTask();
+    } 
+    this.back(); //redirection to homepage
+  }
+
   back(){
     this.router.navigate([""]);
   }
