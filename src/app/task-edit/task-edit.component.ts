@@ -24,16 +24,23 @@ export class TaskEditComponent {
     this.task = this.taskService.getTask(taskId!);  // get task infos
     // create form
     this.editForm = this.fb.group({
+      title: ['', Validators.required],
       description: ['', Validators.required]
     });
     if(this.task){
       this.editForm.patchValue({
+        title: this.task.title,
         description: this.task.description
       })
     }
   }
 
   onSubmit(){
-    console.log("test");
+    var newValue = this.editForm.value.description;
+    if(this.task){
+      this.task.description = newValue;
+      this.taskService.updateTask(this.task);
+      this.router.navigate(['']); // return to homepage when update ok
+    }
   }
 }

@@ -1,7 +1,15 @@
 <form [formGroup]="editForm" (ngSubmit)="onSubmit()">
+    <p>
+    <mat-form-field>
+        <input matInput placeholder="Title" formControlName="title"/>
+        <mat-error>Title is required</mat-error>
+    </mat-form-field>
+    </p>
+    <p>
     <mat-form-field>
         <input matInput placeholder="Description" formControlName="description"/>
         <mat-error>Description is required</mat-error>
     </mat-form-field>
+    </p>
     <button mat-raised-button color="primary" type="submit">save</button>
 </form>
