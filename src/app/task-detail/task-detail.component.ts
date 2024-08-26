@@ -31,6 +31,11 @@ export class TaskDetailComponent {
     this.back(); //redirection to homepage
   }
 
+  editTask(){
+    if(this.task){
+      this.router.navigate(['/edit-task', this.task.id]);
+    }
+  }
   back(){
     this.router.navigate([""]);
   }
