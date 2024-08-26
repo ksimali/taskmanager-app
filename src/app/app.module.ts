@@ -9,12 +9,14 @@ import { MatButtonModule } from '@angular/material/button';
 import { TaskListInputComponent } from './task-list-input/task-list-input.component';
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
+import { TaskEditComponent } from './task-edit/task-edit.component';
 @NgModule({
   declarations: [
     AppComponent,
     TaskListInputComponent,
     TaskListComponent,
-    TaskDetailComponent
+    TaskDetailComponent,
+    TaskEditComponent
   ],
   imports: [
     BrowserModule,
