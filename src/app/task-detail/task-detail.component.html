@@ -4,10 +4,10 @@
     </mat-card-header>
     <mat-card-content>
         <p>{{task.description}}</p>
+        <p>{{task.isDone? 'Completed': 'Not Completed Yet'}}</p>
     </mat-card-content>
     <mat-card-actions>
         <button mat-button class="primary" *ngIf="!task.isDone" (click)="markAsDone()">MarkAsDone</button>
-        <button mat-button class="primary" *ngIf="task.isDone">Completed</button>
     </mat-card-actions>
 </mat-card>
 <button button mat-button (click)="back()">back</button>
