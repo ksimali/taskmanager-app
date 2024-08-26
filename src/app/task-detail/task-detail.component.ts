@@ -22,4 +22,8 @@ export class TaskDetailComponent {
     this.task = taskService.getTask(taskId!);
     console.log(this.task);
   }
+
+  back(){
+    this.router.navigate([""]);
+  }
 }
