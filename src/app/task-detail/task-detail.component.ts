@@ -14,7 +14,7 @@ export class TaskDetailComponent {
     private router: Router,
     private route: ActivatedRoute
   ){
-    const taskId = route.snapshot.paramMap.get("id");
+    const taskId = route.snapshot.paramMap.get("id"); // pour recuperer l'id passer en paramètre dans l'url
     console.log(taskId);
   }
 }
