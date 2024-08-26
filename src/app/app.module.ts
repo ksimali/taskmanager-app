@@ -10,6 +10,9 @@ import { TaskListInputComponent } from './task-list-input/task-list-input.compon
 import { TaskListComponent } from './task-list/task-list.component';
 import { TaskDetailComponent } from './task-detail/task-detail.component';
 import { TaskEditComponent } from './task-edit/task-edit.component';
+import { MatFormFieldModule} from '@angular/material/form-field';
+import { MatInputModule} from '@angular/material/input';
+import { ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,8 +25,10 @@ import { TaskEditComponent } from './task-edit/task-edit.component';
     BrowserModule,
     AppRoutingModule,
     MatCardModule,
-    MatButtonModule
-
+    MatButtonModule,
+    MatFormFieldModule,
+    MatInputModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration(),
